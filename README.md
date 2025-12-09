@@ -82,4 +82,4 @@ Se eligieron las siguientes propiedades y estilos para lograr una interfaz profe
 ## ⏰ Duración y Evaluación
 
 * **Duración Estimada de la Actividad:** 2 horas y 45 minutos.
-* **Evidencia de Aprendizaje:** Repositorio público con el código final y la URL de GitHub Pages.
+* **Evidencia de Aprendizaje:** Repositorio público con el código final y la URL de GitHub Pages.# pseudoclases
