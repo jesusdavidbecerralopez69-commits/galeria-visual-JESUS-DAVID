@@ -1,0 +1,133 @@
+/*
+ * ----------------------------------------------------
+ * 1. DEFINICIÓN DE VARIABLES Y ESTILOS BASE PROFESIONAL
+ * ----------------------------------------------------
+ * Se ha ajustado la paleta para tonos más profundos y se ha añadido una fuente moderna.
+ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+:root {
+    /* Paleta oscura y profesional (Tono Cian-Verde Oscuro) */
+    --color-primario: #00ADB5; /* Cian Profundo (Acento principal, profesional) */
+    --color-secundario: #FFD700; /* Oro/Amarillo (Acento secundario/Hover) */
+    --color-fondo-principal: #222831; /* Fondo muy oscuro, más cálido que el negro puro */
+    --color-fondo-tarjeta: #393E46; /* Fondo de tarjetas, sutilmente diferente */
+    --color-texto-claro: #EEEEEE; /* Color para texto y títulos */
+    
+    /* Transparencia para overlays (Requisito RGBA) */
+    --color-transparencia-oscura: rgba(0, 0, 0, 0.75); 
+}
+
+/* Reset y estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Aplicación de fuente 'Inter' para un estilo limpio y moderno */
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-fondo-principal);
+    color: var(--color-texto-claro);
+    min-width: 800px; 
+    line-height: 1.6; /* Mejora la legibilidad general */
+}
+
+/*
+ * ----------------------------------------------------
+ * 2. ENCABEZADO Y GRADIENTE 1
+ * ----------------------------------------------------
+ * Se utiliza un gradiente con colores profundos para un efecto más sobrio y elegante.
+ */
+.encabezado-principal {
+    /* GRADIENTE 1 (Requisito): Gradiente lineal de acento para la cabecera */
+    background: linear-gradient(135deg, #222831 0%, #393E46 100%);
+    /* Se añade una sutil sombra interior para un efecto de profundidad */
+    box-shadow: inset 0 -3px 5px rgba(0, 0, 0, 0.3); 
+    padding: 60px 20px 40px; /* Más padding vertical para más espacio */
+    text-align: center;
+}
+
+.encabezado-principal h1 {
+    font-size: 3em;
+    font-weight: 800; /* Título muy en negrita para jerarquía */
+    margin-bottom: 10px;
+    color: var(--color-primario);
+    /* Efecto de texto con sombra sutil */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
+}
+
+.encabezado-principal p {
+    font-weight: 300;
+    font-size: 1.2em;
+}
+
+/*
+ * ----------------------------------------------------
+ * 3. BANNER CON BACKGROUND-IMAGE, GRADIENTE 2 Y RGBA
+ * ----------------------------------------------------
+ * Se mejora el enfoque y la presentación del texto sobre la imagen.
+ */
+.banner-promocion {
+    /* BACKGROUND-IMAGE (Requisito): Se mantiene la base técnica */
+    background-image: url('../img/fondo-banner.jpg'); 
+    background-size: cover; 
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 250px; /* Altura ajustada */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-overlay {
+    /* RGBA/TRANSPARENCIA (Requisito): Capa más opaca para mejor contraste */
+    background-color: var(--color-transparencia-oscura); 
+    
+    /* GRADIENTE 2 (Requisito): Gradiente radial más discreto */
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.5) 100%);
+    
+    padding: 30px 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.banner-overlay h2 {
+    font-size: 2em;
+    font-weight: 600;
+    color: var(--color-secundario); /* Acento sutil para el titular */
+}
+
+/*
+ * ----------------------------------------------------
+ * 4. ESTILOS DE GALERÍA (CSS GRID Y TARJETAS PROFESIONALES)
+ * ----------------------------------------------------
+ * Se refinan las tarjetas para un aspecto "neumorphic" o moderno y limpio.
+ */
+.contenedor-galeria {
+    padding: 60px 40px;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Columnas un poco más anchas */
+    gap: 40px; /* Más espacio entre tarjetas */
+}
+
+.recurso-item {
+    background-color: var(--color-fondo-tarjeta);
+    border-radius: 12px; /* Bordes más suaves */
+    overflow: hidden;
+    /* Sombra refinada para un efecto de elevación suave */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 0 6px 6px rgba(0, 0, 0, 0.23); 
+    /* Transición más detallada para un movimiento suave */
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
+}
+
+.recurso-item:hover {
+    /* Efecto de elevación más dramático y sombra más fuerte */
+    transform: translateY(-8px); 
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.3);
+}
